@@ -1,0 +1,41 @@
+{
+  "name": "Corporate Blue",
+  "description": "Clean, professional blue theme for business communications",
+  "category": "professional",
+  "colors": {
+    "bg_primary": "#ffffff",
+    "bg_section": "#f0f4f8",
+    "text_primary": "#1a1a2e",
+    "text_secondary": "#4a5568",
+    "accent": "#0d6efd",
+    "highlight": "#0b5ed7",
+    "border": "#e2e8f0"
+  },
+  "fonts": {
+    "headings": "Inter, Arial, sans-serif",
+    "body": "Inter, Arial, sans-serif",
+    "mono": "SFMono-Regular, Consolas, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(24px, 5vw, 28px)",
+    "body_size": "clamp(14px, 1.5vw, 16px)",
+    "mono_size": "clamp(12px, 1vw, 13px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "24px",
+    "line_height": "1.6"
+  },
+  "design": {
+    "border_radius": "8px",
+    "shadow": "0 1px 3px rgba(0,0,0,0.1)",
+    "header_style": "filled"
+  },
+  "dark_mode": {
+    "bg_primary": "#1a1a2e",
+    "bg_section": "#2d2d44",
+    "text_primary": "#e2e8f0",
+    "text_secondary": "#a0aec0"
+  }
+}

@@ -1,21 +1,22 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Email Preset Schema",
-  "description": "Schema for email template presets",
+  "title": "Email Style Preset Schema",
+  "description": "Schema for visual style presets — defines design language, not content type",
   "type": "object",
-  "required": ["name", "description", "vibe", "colors", "fonts", "constraints"],
+  "required": ["name", "description", "category", "colors", "fonts"],
   "properties": {
     "name": {
       "type": "string",
-      "description": "Preset name (e.g., 'Evening Debrief')"
+      "description": "Human-readable preset name (e.g., 'Corporate Blue')"
     },
     "description": {
       "type": "string",
-      "description": "Short description of the preset"
+      "description": "Short description of the visual style"
     },
-    "vibe": {
+    "category": {
       "type": "string",
-      "description": "Vibe/feeling of the preset"
+      "enum": ["professional", "dark", "editorial", "creative"],
+      "description": "Style category for discovery"
     },
     "colors": {
       "type": "object",
@@ -26,7 +27,8 @@
         "text_primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
         "text_secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
         "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
-        "highlight": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+        "highlight": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "border": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
       }
     },
     "fonts": {
@@ -39,14 +41,38 @@
         "google_fonts_url": { "type": "string" }
       }
     },
-    "constraints": {
+    "typography": {
       "type": "object",
-      "required": ["max_sections", "max_images", "max_cta_buttons"],
       "properties": {
-        "max_sections": { "type": "integer", "minimum": 1 },
-        "max_images": { "type": "integer", "minimum": 0 },
-        "max_cta_buttons": { "type": "integer", "minimum": 0 },
-        "max_image_height": { "type": "string" }
+        "headline_size": { "type": "string" },
+        "body_size": { "type": "string" },
+        "mono_size": { "type": "string" }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "max_width": { "type": "string" },
+        "section_padding": { "type": "string" },
+        "line_height": { "type": "string" }
+      }
+    },
+    "design": {
+      "type": "object",
+      "description": "Signature visual elements",
+      "properties": {
+        "border_radius": { "type": "string" },
+        "shadow": { "type": "string" },
+        "header_style": { "type": "string", "enum": ["filled", "minimal", "gradient"] }
+      }
+    },
+    "dark_mode": {
+      "type": "object",
+      "properties": {
+        "bg_primary": { "type": "string" },
+        "bg_section": { "type": "string" },
+        "text_primary": { "type": "string" },
+        "text_secondary": { "type": "string" }
       }
     }
   }

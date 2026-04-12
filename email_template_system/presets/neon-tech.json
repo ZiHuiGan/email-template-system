@@ -1,0 +1,41 @@
+{
+  "name": "Neon Tech",
+  "description": "Futuristic dark theme with neon accent colors for tech content",
+  "category": "dark",
+  "colors": {
+    "bg_primary": "#0a0a0a",
+    "bg_section": "#141414",
+    "text_primary": "#f0f0f0",
+    "text_secondary": "#888888",
+    "accent": "#00ff88",
+    "highlight": "#ff00ff",
+    "border": "#2a2a2a"
+  },
+  "fonts": {
+    "headings": "Space Grotesk, Arial, sans-serif",
+    "body": "Inter, system-ui, sans-serif",
+    "mono": "JetBrains Mono, Consolas, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(24px, 5vw, 28px)",
+    "body_size": "clamp(14px, 1.5vw, 15px)",
+    "mono_size": "clamp(12px, 1vw, 13px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "24px",
+    "line_height": "1.6"
+  },
+  "design": {
+    "border_radius": "6px",
+    "shadow": "0 0 12px rgba(0,255,136,0.1)",
+    "header_style": "gradient"
+  },
+  "dark_mode": {
+    "bg_primary": "#0a0a0a",
+    "bg_section": "#141414",
+    "text_primary": "#f0f0f0",
+    "text_secondary": "#888888"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Swiss Modern",
+  "description": "Bauhaus-inspired grid layout with strong typography and minimal color",
+  "category": "editorial",
+  "colors": {
+    "bg_primary": "#fafafa",
+    "bg_section": "#ffffff",
+    "text_primary": "#111111",
+    "text_secondary": "#555555",
+    "accent": "#e63946",
+    "highlight": "#457b9d",
+    "border": "#dddddd"
+  },
+  "fonts": {
+    "headings": "DM Sans, Helvetica, Arial, sans-serif",
+    "body": "DM Sans, Helvetica, Arial, sans-serif",
+    "mono": "DM Mono, Consolas, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(26px, 5.5vw, 32px)",
+    "body_size": "clamp(14px, 1.5vw, 15px)",
+    "mono_size": "clamp(12px, 1vw, 13px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "28px",
+    "line_height": "1.5"
+  },
+  "design": {
+    "border_radius": "0px",
+    "shadow": "none",
+    "header_style": "minimal"
+  },
+  "dark_mode": {
+    "bg_primary": "#111111",
+    "bg_section": "#1e1e1e",
+    "text_primary": "#eeeeee",
+    "text_secondary": "#aaaaaa"
+  }
+}

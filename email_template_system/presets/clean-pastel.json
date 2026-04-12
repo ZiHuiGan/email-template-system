@@ -1,0 +1,41 @@
+{
+  "name": "Clean Pastel",
+  "description": "Soft, approachable design with pastel colors and rounded elements",
+  "category": "creative",
+  "colors": {
+    "bg_primary": "#fefefe",
+    "bg_section": "#f8f7ff",
+    "text_primary": "#2d3142",
+    "text_secondary": "#6b7280",
+    "accent": "#7c3aed",
+    "highlight": "#10b981",
+    "border": "#e5e7eb"
+  },
+  "fonts": {
+    "headings": "Nunito, Arial, sans-serif",
+    "body": "Nunito, Arial, sans-serif",
+    "mono": "Fira Code, Consolas, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Fira+Code&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(22px, 4.5vw, 26px)",
+    "body_size": "clamp(14px, 1.5vw, 16px)",
+    "mono_size": "clamp(12px, 1vw, 13px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "24px",
+    "line_height": "1.65"
+  },
+  "design": {
+    "border_radius": "12px",
+    "shadow": "0 2px 8px rgba(124,58,237,0.08)",
+    "header_style": "filled"
+  },
+  "dark_mode": {
+    "bg_primary": "#1e1b2e",
+    "bg_section": "#2a2740",
+    "text_primary": "#e5e7eb",
+    "text_secondary": "#9ca3af"
+  }
+}

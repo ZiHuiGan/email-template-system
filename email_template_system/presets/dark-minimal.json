@@ -1,0 +1,41 @@
+{
+  "name": "Dark Minimal",
+  "description": "Dark background with minimal styling for focused reading",
+  "category": "dark",
+  "colors": {
+    "bg_primary": "#0f0f0f",
+    "bg_section": "#1a1a1a",
+    "text_primary": "#e8e8e8",
+    "text_secondary": "#999999",
+    "accent": "#4da3ff",
+    "highlight": "#ff6b6b",
+    "border": "#333333"
+  },
+  "fonts": {
+    "headings": "system-ui, -apple-system, sans-serif",
+    "body": "system-ui, -apple-system, sans-serif",
+    "mono": "JetBrains Mono, Consolas, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(22px, 4.5vw, 26px)",
+    "body_size": "clamp(14px, 1.5vw, 16px)",
+    "mono_size": "clamp(12px, 1vw, 13px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "20px",
+    "line_height": "1.7"
+  },
+  "design": {
+    "border_radius": "4px",
+    "shadow": "none",
+    "header_style": "minimal"
+  },
+  "dark_mode": {
+    "bg_primary": "#0f0f0f",
+    "bg_section": "#1a1a1a",
+    "text_primary": "#e8e8e8",
+    "text_secondary": "#999999"
+  }
+}
