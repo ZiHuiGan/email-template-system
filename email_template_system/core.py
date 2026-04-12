@@ -15,9 +15,9 @@ Usage:
 import json
 from pathlib import Path
 from typing import Optional, Dict, Any
-from validators.html_validator import HTMLValidator
-from validators.wcag_checker import WCAGChecker
-from validators.constraints_checker import ConstraintsChecker
+from email_template_system.validators.html_validator import HTMLValidator
+from email_template_system.validators.wcag_checker import WCAGChecker
+from email_template_system.validators.constraints_checker import ConstraintsChecker
 
 
 class EmailPreset:

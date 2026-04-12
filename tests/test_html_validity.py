@@ -5,17 +5,13 @@ Validates that generated HTML is structurally sound
 """
 
 from pathlib import Path
-import sys
 
-# Add validators to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from validators.html_validator import HTMLValidator
+from email_template_system.validators.html_validator import HTMLValidator
 
 
 def get_sample_html():
     """Get a sample valid HTML email"""
-    templates_dir = Path(__file__).parent.parent / "templates"
+    templates_dir = Path(__file__).parent.parent / "email_template_system" / "templates"
     with open(templates_dir / "base.html") as f:
         return f.read()
 
@@ -133,7 +129,7 @@ def test_html_validator_gets_stats():
 
 def test_base_template_has_variables():
     """Test that base template has required placeholders"""
-    templates_dir = Path(__file__).parent.parent / "templates"
+    templates_dir = Path(__file__).parent.parent / "email_template_system" / "templates"
     with open(templates_dir / "base.html") as f:
         html = f.read()
 
@@ -150,7 +146,7 @@ def test_base_template_has_variables():
 
 def test_base_template_has_css_variables():
     """Test that base template uses CSS variables"""
-    templates_dir = Path(__file__).parent.parent / "templates"
+    templates_dir = Path(__file__).parent.parent / "email_template_system" / "templates"
     with open(templates_dir / "base.html") as f:
         html = f.read()
 
@@ -163,7 +159,7 @@ def test_base_template_has_css_variables():
 
 def test_base_template_responsive():
     """Test that base template uses responsive sizing"""
-    templates_dir = Path(__file__).parent.parent / "templates"
+    templates_dir = Path(__file__).parent.parent / "email_template_system" / "templates"
     with open(templates_dir / "base.html") as f:
         html = f.read()
 
@@ -173,7 +169,7 @@ def test_base_template_responsive():
 
 def test_base_template_dark_mode():
     """Test that base template supports dark mode"""
-    templates_dir = Path(__file__).parent.parent / "templates"
+    templates_dir = Path(__file__).parent.parent / "email_template_system" / "templates"
     with open(templates_dir / "base.html") as f:
         html = f.read()
 

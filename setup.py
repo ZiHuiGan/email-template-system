@@ -17,10 +17,10 @@ setup(
     description="Reusable HTML email template system with presets, components, and validation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/email-template-system",
+    url="https://github.com/ZiHuiGan/email-template-system",
     project_urls={
-        "Bug Tracker": "https://github.com/yourusername/email-template-system/issues",
-        "Documentation": "https://github.com/yourusername/email-template-system/blob/main/SKILL.md",
+        "Bug Tracker": "https://github.com/ZiHuiGan/email-template-system/issues",
+        "Documentation": "https://github.com/ZiHuiGan/email-template-system/blob/main/SKILL.md",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -37,11 +37,10 @@ setup(
         "Topic :: Software Development :: Libraries",
     ],
     python_requires=">=3.7",
-    py_modules=["email_template_system"],
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        "": [
+        "email_template_system": [
             "presets/*.json",
             "templates/*.html",
             "templates/components/*.html",

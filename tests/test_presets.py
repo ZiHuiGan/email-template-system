@@ -11,7 +11,7 @@ from pathlib import Path
 
 def test_preset_files_exist():
     """Test that all required preset files exist"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
     required_presets = [
         "evening-debrief.json",
         "weekly-report.json",
@@ -25,7 +25,7 @@ def test_preset_files_exist():
 
 def test_preset_schema_valid():
     """Test that all presets follow the schema"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     # Load schema
     with open(presets_dir / "_schema.json") as f:
@@ -62,7 +62,7 @@ def test_preset_schema_valid():
 
 def test_evening_debrief_constraints():
     """Test Evening Debrief specific constraints"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     with open(presets_dir / "evening-debrief.json") as f:
         preset = json.load(f)
@@ -74,7 +74,7 @@ def test_evening_debrief_constraints():
 
 def test_weekly_report_constraints():
     """Test Weekly Report specific constraints"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     with open(presets_dir / "weekly-report.json") as f:
         preset = json.load(f)
@@ -86,7 +86,7 @@ def test_weekly_report_constraints():
 
 def test_morning_brief_constraints():
     """Test Morning Brief specific constraints"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     with open(presets_dir / "morning-brief.json") as f:
         preset = json.load(f)
@@ -98,7 +98,7 @@ def test_morning_brief_constraints():
 
 def test_preset_color_scheme():
     """Test that preset colors are properly defined"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     preset_files = [
         "evening-debrief.json",
@@ -133,7 +133,7 @@ def test_preset_color_scheme():
 
 def test_preset_fonts():
     """Test that preset fonts are properly defined"""
-    presets_dir = Path(__file__).parent.parent / "presets"
+    presets_dir = Path(__file__).parent.parent / "email_template_system" / "presets"
 
     preset_files = [
         "evening-debrief.json",
