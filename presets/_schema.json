@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Email Preset Schema",
+  "description": "Schema for email template presets",
+  "type": "object",
+  "required": ["name", "description", "vibe", "colors", "fonts", "constraints"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Preset name (e.g., 'Evening Debrief')"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the preset"
+    },
+    "vibe": {
+      "type": "string",
+      "description": "Vibe/feeling of the preset"
+    },
+    "colors": {
+      "type": "object",
+      "required": ["bg_primary", "text_primary", "accent"],
+      "properties": {
+        "bg_primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "bg_section": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "text_primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "text_secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "highlight": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      }
+    },
+    "fonts": {
+      "type": "object",
+      "required": ["headings", "body"],
+      "properties": {
+        "headings": { "type": "string" },
+        "body": { "type": "string" },
+        "mono": { "type": "string" },
+        "google_fonts_url": { "type": "string" }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["max_sections", "max_images", "max_cta_buttons"],
+      "properties": {
+        "max_sections": { "type": "integer", "minimum": 1 },
+        "max_images": { "type": "integer", "minimum": 0 },
+        "max_cta_buttons": { "type": "integer", "minimum": 0 },
+        "max_image_height": { "type": "string" }
+      }
+    }
+  }
+}

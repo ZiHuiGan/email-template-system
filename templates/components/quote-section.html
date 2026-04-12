@@ -1,0 +1,28 @@
+<!-- Quote Section Component -->
+<blockquote style="
+    border-left: 4px solid var(--accent);
+    padding-left: clamp(12px, 2vw, 16px);
+    margin: var(--content-gap) 0;
+    font-style: italic;
+    color: var(--text-secondary);
+">
+    <p style="
+        font-size: clamp(14px, 1.5vw, 16px);
+        line-height: var(--line-height);
+        margin: 0 0 8px 0;
+    ">
+        {{ quote }}
+    </p>
+
+    {% if attribution %}
+    <p style="
+        font-size: var(--body-size);
+        color: var(--text-secondary);
+        margin: 0;
+        font-weight: 600;
+        font-style: normal;
+    ">
+        — {{ attribution }}
+    </p>
+    {% endif %}
+</blockquote>

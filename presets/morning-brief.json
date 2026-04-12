@@ -1,0 +1,48 @@
+{
+  "name": "Morning Brief",
+  "description": "Clean, energetic, fast-paced email for morning news brief",
+  "vibe": "Clean, energetic, fast-paced",
+  "colors": {
+    "bg_primary": "#f0f4f8",
+    "bg_section": "#ffffff",
+    "text_primary": "#0a1428",
+    "text_secondary": "#495057",
+    "accent": "#0d6efd",
+    "highlight": "#198754",
+    "border": "#dee2e6"
+  },
+  "fonts": {
+    "headings": "Inter, sans-serif",
+    "body": "Inter, sans-serif",
+    "mono": "Fira Code, monospace",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap"
+  },
+  "typography": {
+    "headline_size": "clamp(20px, 4.5vw, 24px)",
+    "body_size": "clamp(13px, 1.2vw, 15px)",
+    "mono_size": "clamp(11px, 0.9vw, 12px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "20px",
+    "line_height": "1.5"
+  },
+  "structure": [
+    "Quick header (date + headline)",
+    "Top stories (5-8 items)",
+    "Key metrics",
+    "Action items"
+  ],
+  "constraints": {
+    "max_sections": 4,
+    "max_images": 1,
+    "max_cta_buttons": 1,
+    "max_image_height": "250px"
+  },
+  "dark_mode": {
+    "bg_primary": "#1a1d24",
+    "bg_section": "#2d3139",
+    "text_primary": "#e8eaed",
+    "text_secondary": "#b0b7c3"
+  }
+}

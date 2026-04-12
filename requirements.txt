@@ -1,0 +1,8 @@
+# Email Template System Dependencies
+
+# Zero runtime dependencies!
+# This package uses only Python standard library
+
+# Development dependencies (optional)
+# pytest>=6.0  # For running tests
+# pytest-cov>=2.0  # For coverage reporting

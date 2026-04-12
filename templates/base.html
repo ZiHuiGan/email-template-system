@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>{{ email_title }}</title>
+
+    <!-- Fonts from preset -->
+    {{ font_stack }}
+
+    <style>
+        /* ============================================
+           CSS CUSTOM PROPERTIES (from preset)
+           ============================================ */
+        :root {
+            /* Colors */
+            --bg-primary: {{ bg_primary }};
+            --bg-section: {{ bg_section }};
+            --text-primary: {{ text_primary }};
+            --text-secondary: {{ text_secondary }};
+            --accent: {{ accent }};
+            --highlight: {{ highlight }};
+            --border: {{ border }};
+
+            /* Typography */
+            --font-headings: {{ font_headings }};
+            --font-body: {{ font_body }};
+            --font-mono: {{ font_mono }};
+            --headline-size: {{ headline_size }};
+            --body-size: {{ body_size }};
+            --mono-size: {{ mono_size }};
+
+            /* Spacing */
+            --section-padding: {{ section_padding }};
+            --content-gap: clamp(1rem, 2vw, 2rem);
+
+            /* Line height */
+            --line-height: {{ line_height }};
+        }
+
+        /* ============================================
+           RESET & BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background: var(--bg-primary);
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            line-height: var(--line-height);
+            background: var(--bg-primary);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ============================================
+           EMAIL CONTAINER
+           ============================================ */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-primary);
+            width: 100%;
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .header {
+            background: var(--accent);
+            color: white;
+            padding: clamp(16px, 3vw, 24px);
+            text-align: center;
+            border-radius: 0;
+        }
+
+        .header h1 {
+            font-family: var(--font-headings);
+            font-size: var(--headline-size);
+            color: white;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .header-meta {
+            font-size: clamp(12px, 0.9vw, 14px);
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 8px;
+        }
+
+        /* ============================================
+           SECTIONS
+           ============================================ */
+        .section {
+            background: var(--bg-section);
+            padding: var(--section-padding);
+            margin: clamp(8px, 1.5vw, 16px);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-family: var(--font-headings);
+            font-size: clamp(18px, 3.5vw, 22px);
+            color: var(--text-primary);
+            margin: 0 0 var(--content-gap) 0;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: var(--body-size);
+            color: var(--text-secondary);
+            margin: 0 0 clamp(12px, 1.5vw, 16px) 0;
+            font-weight: 500;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3 {
+            font-family: var(--font-headings);
+            color: var(--text-primary);
+            margin: 0 0 var(--content-gap) 0;
+        }
+
+        h1 {
+            font-size: var(--headline-size);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(20px, 3vw, 24px);
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: clamp(16px, 2.5vw, 18px);
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0 0 var(--content-gap) 0;
+            line-height: var(--line-height);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: clamp(10px, 1.5vw, 14px) clamp(16px, 2.5vw, 24px);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: clamp(13px, 1.1vw, 15px);
+            border: none;
+            cursor: pointer;
+            margin: var(--content-gap) 0;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        .cta-button.secondary {
+            background: var(--highlight);
+        }
+
+        /* ============================================
+           IMAGES
+           ============================================ */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: var(--content-gap) 0;
+        }
+
+        .image-container {
+            max-width: 100%;
+            max-height: clamp(200px, 40vh, 400px);
+            overflow: hidden;
+            border-radius: 4px;
+            margin: var(--content-gap) 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        /* ============================================
+           LISTS
+           ============================================ */
+        ul, ol {
+            margin: 0 0 var(--content-gap) 0;
+            padding-left: clamp(20px, 3vw, 32px);
+        }
+
+        li {
+            margin: clamp(4px, 0.8vw, 8px) 0;
+            line-height: var(--line-height);
+        }
+
+        /* ============================================
+           CODE
+           ============================================ */
+        code {
+            font-family: var(--font-mono);
+            font-size: var(--mono-size);
+            background: rgba(0, 0, 0, 0.05);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--accent);
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            padding: clamp(12px, 2vw, 16px);
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: var(--content-gap) 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .code-block code {
+            background: transparent;
+            padding: 0;
+            color: var(--text-primary);
+            display: block;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: var(--mono-size);
+        }
+
+        /* ============================================
+           BADGES & TAGS
+           ============================================ */
+        .badge {
+            display: inline-block;
+            background: var(--highlight);
+            color: white;
+            padding: clamp(4px, 0.6vw, 6px) clamp(8px, 1.2vw, 12px);
+            border-radius: 12px;
+            font-size: clamp(11px, 0.9vw, 13px);
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .badge.primary {
+            background: var(--accent);
+        }
+
+        .badge.secondary {
+            background: var(--text-secondary);
+            color: white;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            text-align: center;
+            padding: clamp(16px, 3vw, 24px);
+            font-size: clamp(11px, 0.8vw, 12px);
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: clamp(16px, 3vw, 24px);
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           DARK MODE
+           ============================================ */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: {{ dark_bg_primary }};
+                --bg-section: {{ dark_bg_section }};
+                --text-primary: {{ dark_text_primary }};
+                --text-secondary: {{ dark_text_secondary }};
+            }
+
+            code {
+                background: rgba(255, 255, 255, 0.1);
+            }
+
+            .code-block {
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 600px) {
+            .email-container {
+                width: 100%;
+                padding: 0;
+            }
+
+            .section {
+                margin: clamp(4px, 1vw, 8px);
+                border-radius: 4px;
+            }
+        }
+
+        /* ============================================
+           REDUCED MOTION
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>{{ preset_header }}</h1>
+            {% if header_meta %}<div class="header-meta">{{ header_meta }}</div>{% endif %}
+        </div>
+
+        <!-- Email Content (generated by Claude) -->
+        {{ email_content }}
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 News Intelligence. <a href="{{ unsubscribe_url }}">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+</html>

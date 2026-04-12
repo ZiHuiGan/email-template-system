@@ -1,0 +1,79 @@
+<!-- 3-Column Grid Component (Chip → AI Lab → App) -->
+<table width="100%" border="0" cellpadding="0" cellspacing="12" style="margin: var(--content-gap) 0;">
+  <tr>
+    <!-- Tier 1: Chips & Infrastructure -->
+    <td width="33%" style="
+        border-left: 3px solid #FF9800;
+        padding-left: 12px;
+        vertical-align: top;
+    ">
+        <h4 style="
+            color: #FF9800;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: clamp(14px, 2.2vw, 16px);
+            font-family: var(--font-headings);
+        ">
+            {{ tier1_title }}
+        </h4>
+        <p style="
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            line-height: var(--line-height);
+            margin: 0;
+        ">
+            {{ tier1_content }}
+        </p>
+    </td>
+
+    <!-- Tier 2: AI Labs & Research -->
+    <td width="33%" style="
+        border-left: 3px solid #2196F3;
+        padding-left: 12px;
+        vertical-align: top;
+    ">
+        <h4 style="
+            color: #2196F3;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: clamp(14px, 2.2vw, 16px);
+            font-family: var(--font-headings);
+        ">
+            {{ tier2_title }}
+        </h4>
+        <p style="
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            line-height: var(--line-height);
+            margin: 0;
+        ">
+            {{ tier2_content }}
+        </p>
+    </td>
+
+    <!-- Tier 3: Data Engineering & Applications -->
+    <td width="33%" style="
+        border-left: 3px solid #4CAF50;
+        padding-left: 12px;
+        vertical-align: top;
+    ">
+        <h4 style="
+            color: #4CAF50;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: clamp(14px, 2.2vw, 16px);
+            font-family: var(--font-headings);
+        ">
+            {{ tier3_title }}
+        </h4>
+        <p style="
+            font-size: var(--body-size);
+            color: var(--text-primary);
+            line-height: var(--line-height);
+            margin: 0;
+        ">
+            {{ tier3_content }}
+        </p>
+    </td>
+  </tr>
+</table>

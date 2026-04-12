@@ -1,0 +1,28 @@
+<!-- Article Card Component -->
+<div class="section" style="border-left: 4px solid var(--accent);">
+    <h3 style="margin-top: 0; color: var(--text-primary);">{{ title }}</h3>
+
+    {% if source or date %}
+    <div class="section-subtitle" style="margin-bottom: 12px;">
+        {% if source %}<strong>{{ source }}</strong>{% endif %}
+        {% if source and date %} · {% endif %}
+        {% if date %}<span style="color: var(--text-secondary);">{{ date }}</span>{% endif %}
+    </div>
+    {% endif %}
+
+    <p style="color: var(--text-primary); margin-bottom: 16px;">{{ summary }}</p>
+
+    {% if impact_level %}
+    <div style="margin-bottom: 16px;">
+        <span class="badge" style="background: var(--highlight); color: white; display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600;">
+            Impact: {{ impact_level }}
+        </span>
+    </div>
+    {% endif %}
+
+    {% if url %}
+    <a href="{{ url }}" class="cta-button" style="display: inline-block; background: var(--accent); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: 600;">
+        Read →
+    </a>
+    {% endif %}
+</div>
