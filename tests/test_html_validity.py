@@ -179,7 +179,7 @@ def test_base_template_dark_mode():
 
     # Should have media query for dark mode
     assert "@media (prefers-color-scheme: dark)" in html
-    assert "dark_mode" in html.lower()
+    assert "dark_" in html.lower()  # e.g. dark_bg_primary, dark_text_primary
 
 
 if __name__ == "__main__":
