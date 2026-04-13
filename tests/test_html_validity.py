@@ -212,6 +212,36 @@ def test_render_empty_content_does_not_crash():
     assert "<!DOCTYPE html>" in html
 
 
+def test_no_jinja_syntax_in_rendered_output():
+    """Rendered HTML must not contain Jinja tags — we use simple string replacement."""
+    import re
+    preset = EmailPreset.load("corporate-blue")
+    template = EmailTemplate(preset)
+    html = template.render(
+        content="<p>Test</p>",
+        email_title="Test",
+        header_meta="Some meta",
+    )
+    jinja_tags = re.findall(r"\{%.*?%\}", html)
+    assert jinja_tags == [], f"Jinja syntax leaked into output: {jinja_tags}"
+
+
+def test_no_unresolved_placeholders_in_rendered_output():
+    """Rendered HTML must not have any {{ }} placeholders left."""
+    import re
+    preset = EmailPreset.load("warm-editorial")
+    template = EmailTemplate(preset)
+    html = template.render(
+        content="<p>Content</p>",
+        email_title="Title",
+        header_meta="Meta",
+        preheader_text="Preview",
+        unsubscribe_url="mailto:test@test.com",
+    )
+    unresolved = re.findall(r"\{\{.*?\}\}", html)
+    assert unresolved == [], f"Unresolved placeholders: {unresolved}"
+
+
 if __name__ == "__main__":
     import pytest
     pytest.main([__file__, "-v"])
