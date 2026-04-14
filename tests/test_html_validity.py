@@ -192,7 +192,7 @@ def test_render_different_presets_have_different_colors():
     html_a = tmpl_a.render(content="<p>A</p>")
     html_b = tmpl_b.render(content="<p>B</p>")
     assert "#0d6efd" in html_a  # corporate-blue
-    assert "#4da3ff" in html_b  # dark-minimal
+    assert "#ED7843" in html_b  # dark-minimal
 
 
 def test_render_preheader_defaults_to_title():

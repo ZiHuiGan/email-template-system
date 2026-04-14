@@ -1,21 +1,21 @@
 {
   "name": "Dark Minimal",
-  "description": "Dark background with minimal styling for focused reading",
+  "description": "Navy blue background with orange accent — inspired by SlidesCarinval design language",
   "category": "dark",
   "colors": {
-    "bg_primary": "#0f0f0f",
-    "bg_section": "#1a1a1a",
-    "text_primary": "#e8e8e8",
-    "text_secondary": "#999999",
-    "accent": "#4da3ff",
-    "highlight": "#ff6b6b",
-    "border": "#333333"
+    "bg_primary": "#0F1A38",
+    "bg_section": "#1a2744",
+    "text_primary": "#ffffff",
+    "text_secondary": "#a0aec0",
+    "accent": "#ED7843",
+    "highlight": "#2874fc",
+    "border": "#2a3a5c"
   },
   "fonts": {
-    "headings": "system-ui, -apple-system, sans-serif",
-    "body": "system-ui, -apple-system, sans-serif",
+    "headings": "Poppins, system-ui, -apple-system, sans-serif",
+    "body": "Poppins, system-ui, -apple-system, sans-serif",
     "mono": "JetBrains Mono, Consolas, monospace",
-    "google_fonts_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=JetBrains+Mono&display=swap"
   },
   "typography": {
     "headline_size": "clamp(22px, 4.5vw, 26px)",
@@ -33,9 +33,9 @@
     "header_style": "minimal"
   },
   "dark_mode": {
-    "bg_primary": "#0f0f0f",
-    "bg_section": "#1a1a1a",
-    "text_primary": "#e8e8e8",
-    "text_secondary": "#999999"
+    "bg_primary": "#0a1228",
+    "bg_section": "#13203a",
+    "text_primary": "#ffffff",
+    "text_secondary": "#8a9ab5"
   }
 }
