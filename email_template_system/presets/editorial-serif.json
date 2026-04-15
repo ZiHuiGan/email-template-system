@@ -1,0 +1,41 @@
+{
+  "name": "Editorial Serif",
+  "description": "Warm cream canvas with terracotta accent — FT/NYT-inspired editorial identity with a strict 4-color palette (canvas/ink/accent/mute). Everything else is opacity variation.",
+  "category": "editorial",
+  "colors": {
+    "bg_primary": "#fdfbf6",
+    "bg_section": "#fdfbf6",
+    "text_primary": "#1a1a1a",
+    "text_secondary": "#8a7f66",
+    "accent": "#b8452a",
+    "highlight": "#b8452a",
+    "border": "#8a7f66"
+  },
+  "fonts": {
+    "headings": "Georgia, 'Iowan Old Style', 'Times New Roman', serif",
+    "body": "Georgia, 'Iowan Old Style', 'Times New Roman', serif",
+    "mono": "ui-monospace, 'SF Mono', Consolas, monospace",
+    "google_fonts_url": ""
+  },
+  "typography": {
+    "headline_size": "clamp(22px, 4.5vw, 26px)",
+    "body_size": "clamp(13.5px, 1.5vw, 15px)",
+    "mono_size": "clamp(11px, 1vw, 12px)"
+  },
+  "layout": {
+    "max_width": "600px",
+    "section_padding": "24px",
+    "line_height": "1.6"
+  },
+  "design": {
+    "border_radius": "3px",
+    "shadow": "none",
+    "header_style": "minimal"
+  },
+  "dark_mode": {
+    "bg_primary": "#1a1612",
+    "bg_section": "#1a1612",
+    "text_primary": "#f0ebe0",
+    "text_secondary": "#9a8f76"
+  }
+}
