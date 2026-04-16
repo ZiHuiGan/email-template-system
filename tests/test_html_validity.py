@@ -82,7 +82,8 @@ def test_base_template_has_variables():
     """Base template has required placeholders."""
     with open(TEMPLATES_DIR / "base.html") as f:
         html = f.read()
-    for var in ["{{ email_title }}", "{{ preset_header }}", "{{ email_content }}", "{{ unsubscribe_url }}"]:
+    # v2.1 FT redesign: preset_header + unsubscribe_url retired (emailer.py owns header now)
+    for var in ["{{ email_title }}", "{{ email_content }}", "{{ preheader_text }}"]:
         assert var in html, f"Missing template variable: {var}"
 
 
@@ -90,10 +91,12 @@ def test_base_template_has_css_variables():
     """Base template uses CSS custom properties."""
     with open(TEMPLATES_DIR / "base.html") as f:
         html = f.read()
+    # v2.1 FT redesign: 4-color palette (canvas/ink/accent/mute) replaces old naming
     assert "var(--" in html
-    assert "--bg-primary" in html
-    assert "--text-primary" in html
+    assert "--canvas" in html
+    assert "--ink" in html
     assert "--accent" in html
+    assert "--mute" in html
 
 
 def test_base_template_responsive():
