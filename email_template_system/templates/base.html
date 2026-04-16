@@ -174,34 +174,34 @@
         .section-label.muted { color: var(--mute); }
 
         /* ==============================================
-           THEME CONTAINER (single bordered box per theme)
+           THEME BLOCK (flat layout, no box — FT style)
            ============================================== */
         .theme-box {
-            background: rgba(184, 69, 42, 0.05);
-            border: 1px solid rgba(184, 69, 42, 0.35);
-            border-radius: var(--border-radius);
-            padding: 16px 18px;
-            margin: 0 0 14px 0;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 24px 28px;
+            margin: 0;
         }
-        .theme-box + .theme-box { margin-top: 18px; }
+        .theme-box + .theme-box { margin-top: 0; }
         .theme-box h2 {
-            font-size: 19px;
+            font-size: 20px;
             margin-bottom: 4px;
+            line-height: 1.25;
         }
         .theme-article-count {
             font-family: var(--font-meta);
             font-size: 11px;
             color: var(--mute);
-            font-style: italic;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        /* Article row inside theme-box */
+        /* Article row — numbered, no dividers */
         .article-row {
-            padding: 10px 0;
+            padding: 14px 0;
         }
         .article-row + .article-row {
-            border-top: 1px dashed rgba(138, 127, 102, 0.3);
+            border-top: none;
         }
         .article-row .article-title {
             font-family: var(--font-headings);
@@ -309,27 +309,17 @@
         }
 
         /* ==============================================
-           QUICK HITS / OTHER SIGNALS (list, no enclosing box)
-           Last item: no bottom divider.
+           QUICK HITS / OTHER SIGNALS — flat, numbered, same as Top Story / Theme
            ============================================== */
         .hit-list {
-            padding: 4px 28px 8px;
+            padding: 4px 28px 12px;
         }
         .hit-list .article-row {
-            padding: 8px 0;
-            border-top: 1px dashed rgba(138, 127, 102, 0.3);
-        }
-        .hit-list .article-row:first-child {
+            padding: 14px 0;
             border-top: none;
         }
-        /* Explicit override: last item never has a trailing divider
-           (the border-top above already handles this; no border-bottom on any row.) */
-
         .hit-list.other-signals .article-row {
-            padding: 6px 0;
-        }
-        .hit-list.other-signals .article-title {
-            font-size: 12.5px;
+            padding: 10px 0;
         }
 
         /* ==============================================
